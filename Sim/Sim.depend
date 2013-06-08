@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1370648543 source:c:\users\stupak\documents\github\circcellsim\sim\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ring.h"
+	"cell.h"
+
+1370645098 c:\users\stupak\documents\github\circcellsim\sim\ring.h
+	"stdbool.h"
+	"cell.h"
+
+1370648500 source:c:\users\stupak\documents\github\circcellsim\sim\ring.c
+	<stdlib.h>
+	<stdio.h>
+	"ring.h"
+	"cell.h"
+
+1370643463 c:\users\stupak\documents\github\circcellsim\sim\celltypes.h
+	"stdbool.h"
+
+1370648294 source:c:\users\stupak\documents\github\circcellsim\sim\cell.c
+	"cell.h"
+
+1370648294 c:\users\stupak\documents\github\circcellsim\sim\cell.h
+	"stdbool.h"
+

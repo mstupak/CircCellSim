@@ -31,9 +31,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="cell.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cell.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="ring.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ring.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
