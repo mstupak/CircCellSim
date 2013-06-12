@@ -1,5 +1,6 @@
 #include <stddef.h>
 #include "cell.h"
+#include "photon.h"
 
 
 cellColorToStringMap cellColorToString[5] =
@@ -38,7 +39,7 @@ void cellInit( Cell *c )
 {
     // init "start" fields
     c->start.active = false;
-    c->start.direction = START_NONE;
+    c->start.direction = PHOTON_NONE;
     c->start.color = COLOR_NONE;
 
     // init "pass" fields
@@ -59,8 +60,12 @@ CellColorEnum cellCalc( Cell *c, bool isFirstCycle )
 
     if( isFirstCycle && c->start.active )
     {
-        // create appropriate photon
+        // create photon
+        Photon *p = photonNew( 0 );
+        p->direction = c->start.direction;
+        p->color = c->start.color;
         // return photon color
+        return p->color;
     }
 
     // if we have at least one photon
@@ -76,7 +81,6 @@ void cellDo( Cell *c, Cell *left, Cell *right )
     {
         return;
     }
-
 
     /*
     if( c->pass.active && matchPhoton( c ) )

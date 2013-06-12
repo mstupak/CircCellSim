@@ -6,6 +6,7 @@
 #define CELL_H_INCLUDED
 
 #include "stdbool.h"
+#include "photon.h"
 
 // Generic color structures
 typedef enum CellColorEnums
@@ -46,7 +47,7 @@ extern cellStartDirectionToStringMap cellStartDirectionToString[];
 typedef struct CellStarts
 {
     bool active;
-    CellStartDirectionEnum direction;
+    PhotonDirectionEnum direction;
     CellColorEnum color;
 } CellStart;
 

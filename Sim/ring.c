@@ -73,6 +73,7 @@ void ringAddNode( Ring *r, Node *n )
 
 // Ring iterator API
 
+// iterator is only valid after first call to Next
 RingIterator *ringIteratorNew( Ring *r )
 {
     RingIterator *ri = malloc((sizeof(RingIterator)));

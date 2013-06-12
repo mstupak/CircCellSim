@@ -2,9 +2,33 @@
 #include <stdlib.h>
 #include "ring.h"
 #include "cell.h"
+#include "photon.h"
 
 int main()
 {
+    PhotonList *pl = photonListNew();
+
+    photonListAdd( pl, photonNew(0) );
+    photonListAdd( pl, photonNew(1) );
+    photonListAdd( pl, photonNew(2) );
+
+    PhotonListIterator *pli = photonListIteratorNew( pl );
+    while( photonListIteratorNext( pli ) )
+    {
+        photonPrint( photonListIteratorGet( pli ) );
+    }
+
+    Photon *p;
+    p = photonListPop( pl );
+
+    while( p != NULL )
+    {
+        photonPrint( p );
+        photonDelete( p );
+        p = photonListPop( pl );
+    }
+
+    /*
     Ring *r = ringNew();
     Node *n;
 
@@ -39,7 +63,7 @@ int main()
 
     ringPrint( r );
 
-    /*
+
     RingIterator *ri = ringIteratorNew( r );
     while( ringIteratorNext( ri ) )
     {
